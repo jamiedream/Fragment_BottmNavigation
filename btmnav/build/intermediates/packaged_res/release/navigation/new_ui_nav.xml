@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/new_ui_nav"
+    app:startDestination="@id/navigation_home"
+    >
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.jy.fragment_bottmnavigation.Fragment.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/navigation_friend"
+        android:name="com.jy.fragment_bottmnavigation.Fragment.friend.CaringFriendFragment"
+        android:label="@string/title_friend"
+        tools:layout="@layout/fragment_friend">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_statics"
+        android:name="com.jy.fragment_bottmnavigation.Fragment.statics.StaticsFragment"
+        android:label="@string/title_statics"
+        tools:layout="@layout/fragment_statics"/>
+
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="com.jy.fragment_bottmnavigation.Fragment.setting.SettingFragment"
+        android:label="@string/title_setting"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_navigation_setting_to_navigation_setting_second"
+            app:destination="@id/navigation_setting_second" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_setting_second"
+        android:name="com.jy.fragment_bottmnavigation.Fragment.setting.SettingSecondFragment"
+        android:label="@string/title_setting_second"
+        tools:layout="@layout/fragment_setting_second">
+        <action
+            android:id="@+id/action_navigation_setting_second_to_navigation_setting"
+            app:destination="@id/navigation_setting" />
+    </fragment>
+
+
+
+</navigation>

@@ -1,2 +1,3 @@
 rootProject.name='Fragment_BottmNavigation'
 include ':app'
+include ':btmnav'

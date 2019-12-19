@@ -1,0 +1,37 @@
+R_DEF: Internal format may change without notice
+local
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
+id action_navigation_setting_second_to_navigation_setting
+id action_navigation_setting_to_navigation_setting_second
+id bottom_nav
+id btn_next
+id btn_previous
+id host_fragment
+id name
+id navigation_friend
+id navigation_home
+id navigation_setting
+id navigation_setting_second
+id navigation_statics
+id new_ui_nav
+id recycler_view
+layout activity_main
+layout fragment_friend
+layout fragment_home
+layout fragment_setting
+layout fragment_setting_second
+layout fragment_statics
+layout view_list_friend
+menu bottom_menu
+mipmap ic_launcher
+mipmap ic_launcher_round
+navigation new_ui_nav
+string app_name
+string title_friend
+string title_home
+string title_setting
+string title_setting_second
+string title_statics
+style AppTheme

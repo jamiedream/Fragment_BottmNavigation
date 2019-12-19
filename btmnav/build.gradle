@@ -1,0 +1,136 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // To inline the bytecode built with JVM target 1.8 into
+    // bytecode that is being built with JVM target 1.6. (e.g. navArgs)
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.1.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.google.android.material:material:1.2.0-alpha01'
+
+}
+
+
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+// 這個版本是區分庫版本的，因此當我們需要更新library時記得修改這個版本
+version = "0.0.1"
+
+def siteUrl = 'https://github.com/jamiedream/Fragment_BottmNavigation'      // 項目的主頁
+def gitUrl = 'https://github.com/jamiedream/Fragment_BottmNavigation.git'       // Git倉庫的url
+group = "com.jy.fragment_bottmnavigation"         // Maven Group ID for the artifact，一般填你唯一的包名
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                // Add your description here
+                name 'fragment_bottmnavigation'
+                url siteUrl
+                // Set your license
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers { // 填寫一些開發者的訊息
+                    developer {
+                        id 'jamiedream'
+                        name 'ChunYing Yen'
+                        email 'jamie.yen@viwave.com'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+javadoc {
+    options{
+        encoding "UTF-8"
+        charSet 'UTF-8'
+        links "http://docs.oracle.com/javase/7/docs/api"
+    }
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+    configurations = ['archives']
+    pkg {
+        repo = "TestGradle"      // 這邊是對應jCenter的倉庫名稱
+        name = "fragment_bottmnavigation"    // 發佈到jCenter上的項目名稱
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
+}
+
+tasks.getByPath(":btmnav:javadoc").enabled = false

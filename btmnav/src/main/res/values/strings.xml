@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Fragment_BottmNavigation</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_friend">Caring Friend</string>
+    <string name="title_statics">Statics</string>
+    <string name="title_setting">Setting</string>
+    <string name="title_setting_second">Setting Second</string>
+</resources>

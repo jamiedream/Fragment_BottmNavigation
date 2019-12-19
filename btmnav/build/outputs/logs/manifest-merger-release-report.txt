@@ -1,0 +1,65 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:1:1-18:12
+INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:1:1-18:12
+INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:1:1-18:12
+INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:1:1-18:12
+INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:1:1-18:12
+INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:1:1-18:12
+INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:1:1-18:12
+	package
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:2:5-28
+		INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+		INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:1:1-18:12
+		INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:1:1-18:12
+		INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:1:11-69
+application
+ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:3:5-17:19
+	android:supportsRtl
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:8:9-35
+	android:label
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:6:9-41
+	android:roundIcon
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:7:9-54
+	android:icon
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:5:9-43
+	android:allowBackup
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:4:9-35
+	android:theme
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:9:9-40
+activity#com.jy.btmnav.MainActivity
+ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:10:9-16:20
+	android:name
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:10:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:11:13-15:29
+action#android.intent.action.MAIN
+ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:12:17-69
+	android:name
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:12:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:14:17-77
+	android:name
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml:14:27-74
+uses-sdk
+INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+		INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+		ADDED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
+		INJECTED from /Users/chunyingyen/Documents/ViWave/Fragment_BottmNavigation/btmnav/src/main/AndroidManifest.xml
