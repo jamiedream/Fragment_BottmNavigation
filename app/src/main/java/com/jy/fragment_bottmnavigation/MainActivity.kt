@@ -24,11 +24,11 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navFragments, appBarConfiguration)
         bottomNav.setupWithNavController(navFragments)
 
-//        bottomNav.getOrCreateBadge(R.id.navigation_home).number = 5
-        val menuItemId = bottomNav.menu.getItem(0).itemId
-        val badgeDrawable = bottomNav.getOrCreateBadge(menuItemId)
-        badgeDrawable.isVisible = true
-        badgeDrawable.number = 1
+        bottomNav.getOrCreateBadge(R.id.navigation_home).number = 5
+//        val menuItemId = bottomNav.menu.getItem(0).itemId
+//        val badgeDrawable = bottomNav.getOrCreateBadge(menuItemId)
+//        badgeDrawable.isVisible = true
+//        badgeDrawable.number = 1
     }
 
 }
