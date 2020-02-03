@@ -2,6 +2,7 @@ package com.jy.fragment_bottmnavigation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -15,6 +16,10 @@ class MainActivity : AppCompatActivity() {
     private val navFragments by lazy { findNavController(R.id.host_fragment) }
     private val bottomNav by lazy { findViewById<BottomNavigationView>(R.id.bottom_nav) }
 
+    override fun onSupportNavigateUp(): Boolean {
+        return Navigation.findNavController(this, R.id.host_fragment).navigateUp() || super.onSupportNavigateUp()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,10 +30,7 @@ class MainActivity : AppCompatActivity() {
         bottomNav.setupWithNavController(navFragments)
 
         bottomNav.getOrCreateBadge(R.id.navigation_home).number = 5
-//        val menuItemId = bottomNav.menu.getItem(0).itemId
-//        val badgeDrawable = bottomNav.getOrCreateBadge(menuItemId)
-//        badgeDrawable.isVisible = true
-//        badgeDrawable.number = 1
+
     }
 
 }
