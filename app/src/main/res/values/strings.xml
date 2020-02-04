@@ -6,4 +6,8 @@
     <string name="title_statics">Statics</string>
     <string name="title_setting">Setting</string>
     <string name="title_setting_second">Setting Second</string>
+
+    <string name="default_notification_channel_id">Chuck</string>
+    <string name="msg_token_fmt" translatable="false">InstanceID Token: %s</string>
+
 </resources>
