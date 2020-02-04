@@ -8,6 +8,7 @@ import android.content.Intent
 import android.media.RingtoneManager
 import android.os.Build
 import android.util.Log
+import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
@@ -38,13 +39,22 @@ class FirebaseService: FirebaseMessagingService() {
 
         val channelId = getString(R.string.default_notification_channel_id)
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
+        val contentView = RemoteViews(packageName, R.layout.view_custom_notification)
+        contentView.setTextViewText(R.id.title, title)
+        contentView.setTextViewText(R.id.content, msg)
+        contentView.setImageViewResource(R.id.image, R.drawable.common_full_open_on_phone)
+        contentView.setImageViewResource(R.id.image_bg, R.drawable.bg_pure_color)
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
-            .setSmallIcon(R.drawable.common_full_open_on_phone)
-            .setContentTitle(title)
-            .setContentText(msg)
-            .setAutoCancel(true)
+            .setCustomBigContentView(contentView)
+            .setSmallIcon(R.drawable.ic_home_black_24dp)
+//            .setContentTitle(title)
+//            .setContentText(msg)
+//            .setAutoCancel(true)
             .setSound(defaultSoundUri)
             .setContentIntent(pendingIntent)
+            .setStyle(NotificationCompat.DecoratedCustomViewStyle())
+
+
 
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
